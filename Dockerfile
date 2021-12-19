@@ -30,7 +30,6 @@ RUN mkdir /app/gautam
 RUN wget -O /app/gautam/gclone.gz https://git.io/JJMSG
 RUN gzip -d /app/gautam/gclone.gz
 RUN chmod 0775 /app/gautam/gclone
-RUN curl -L 'https://gist.github.com/prxpostern/0f6cd02a9aec8e61c24dcd45de8f0e0c/raw/b18fe12b8f0b919658cefd461c94ece4c53b13c4/rclone.conf' -o '/app/rclone.conf'
 COPY requirements.txt .
 RUN pip3 install --no-cache-dir -r requirements.txt
 COPY . .
