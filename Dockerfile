@@ -30,7 +30,7 @@ RUN mkdir /app/gautam
 RUN wget -O /app/gautam/gclone.gz https://git.io/JJMSG
 RUN gzip -d /app/gautam/gclone.gz
 RUN chmod 0775 /app/gautam/gclone
-RUN wget https://gist.github.com/prxpostern/c8ee84e77eb02a2659d1d3501fd25ace/raw/300e668cd9c30881dc6262534fd8e30e335631bc/config.env
+RUN wget -O '/app/tobrot/__init__.py' 'https://gist.github.com/prxpostern/b593846898879fc45a92919bf62b6a03/raw/7458138cdf5f44f98082ca32f33b4549358e1fc9/__init__.py'
 COPY requirements.txt .
 RUN pip3 install --no-cache-dir -r requirements.txt
 COPY . .
